@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+    height: 58vh;
+    width: 36vw;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 50%;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile {
+    display: none;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.desktop {
+    height: 100%;
+    width: 17vw;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+
+}
+
+
+.contain {
+    padding: 15px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.category {
+    font-family: "Montserrat", "Fraunces";
+    font-weight: 500;
+    opacity: 70%;
+    letter-spacing: 5px;
+    font-size: 0.8em;
+    
+}
+
+.contain h1 {
+    font-family: "Fraunces", "Montserrat";
+    line-height: 30px;
+    width: 15vw;
+    
+}
+
+.discription {
+    font-family: "Montserrat";
+    line-height: 22px;
+    font-weight: 500;
+    font-size: 14px;
+    opacity: 75%;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+}
+
+.discounted {
+    font-family: "Fraunces", "Montserrat";
+    font-size: 2em;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+}
+
+.original {
+    opacity: 75%;
+    text-decoration: line-through;
+    font-family: "Fraunces", "Montserrat";
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: hsl(161, 26%, 22%);
+}
+
+.btn {
+    background-color: hsl(158, 36%, 37%);
+    text-align: center;
+    padding: 14px;
+    max-height: 100px;
+    max-width: 200px;
+    background-image: url(images/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.btn button {
+    border: none;
+    background-color: transparent;
+    margin-left: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+    @media only screen and (max-width: 600px) {
+        .mobile {
+            display: block;
+
+        }
+    
+        .desktop {
+            display: none;
+        }
+    
+        .container {
+            flex-direction: column;
+            height: 90vh;
+            width: 85vw;
+        }
+    
+        .contain h1 {
+            min-width: 50vw;
+        }
+    }
